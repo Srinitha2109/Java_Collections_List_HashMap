@@ -98,11 +98,6 @@ public class ProductList {
        productList.add(prodList);
     }
 
-    public static void getproductList() {
-        for (ProductList p : productList) {
-            System.out.println(p);
-        }
-    }
 
     public static void sortByCostAsc() {
         Collections.sort(productList, (p1, p2) -> {

@@ -55,13 +55,13 @@ public class ProdListMain {
                     break;
 
                 case 4:
-                    ProductList.sortByDiscAsc();
+                    ProductList.sortByDiscDesc();
                     break;
                 case 5:
                     ProductList.sortByRatingAsc();
                     break;
                 case 6:
-                    ProductList.sortByRatingAsc();
+                    ProductList.sortByRatingDesc();
                     break;
 
                 case 7 :

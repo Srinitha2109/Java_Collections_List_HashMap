@@ -98,7 +98,7 @@ public class ProdHashMap {
 
     public static void sortByCostAsc(){
         List<ProdHashMap> prodList= new ArrayList<>(productMap.values());
-        Collections.sort(prodList,(p1,p2)->
+        Collections.sort( prodList,(p1,p2)->
                 Double.compare(p1.getCost(),p2.getCost()));
         for(ProdHashMap p:prodList){
             System.out.println("id: "+ p.getPid()+ " - "+ p);
@@ -165,6 +165,7 @@ public class ProdHashMap {
             }
         }
     }
+
     public static void filterByCategory(String pName){
         for(Map.Entry<Integer,ProdHashMap>e:productMap.entrySet()){
             if(pName.equals(e.getValue().getCategory())){
