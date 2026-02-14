@@ -5,6 +5,7 @@ import org.example.List.Phone;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProductList {
     private int pid;
@@ -152,34 +153,41 @@ public class ProductList {
             System.out.println(p);
         }
     }
-    public static void filterByName(String pname){
-        for(ProductList p:productList){
-            if(pname.equals(p.getpName())) {
-                System.out.println(p);
-            }
-        }
+    public static List<ProductList> filterByName(String pname){
+//        for(ProductList p:productList){
+//            if(pname.equals(p.getpName())) {
+//                System.out.println(p);
+//            }
+//        }
+        return (productList.stream().filter(p->pname.equals(p.getpName())).toList());
     }
 
-    public static void filterByBrand(String brand){
-        for(ProductList p:productList){
-            if(brand.equals(p.getBrand())) {
-                System.out.println(p);
-            }
-        }
+    public static List<ProductList> filterByBrand(String brand){
+//        for(ProductList p:productList){
+//            if(brand.equals(p.getBrand())) {
+//                System.out.println(p);
+//            }
+//        }
+        return (productList.stream().filter(p->brand.equals(p.getBrand())).toList());
     }
 
-    public static void filterByCategory(String category){
-        for(ProductList p:productList){
-            if(category.equals(p.getCategory())) {
-                System.out.println(p);
-            }
-        }
+    public static List<ProductList> filterByCategory(String category){
+//        for(ProductList p:productList){
+//            if(category.equals(p.getCategory())) {
+//                System.out.println(p);
+//            }
+//        }
+        return (productList.stream().filter(p->category.equals(p.getCategory())).toList());
+
     }
-    public static void filterByCostRange(double minCost,double maxCost){
-        for(ProductList p:productList){
-            if(p.getCost()>=minCost && p.getCost()<=maxCost){
-                System.out.println(p);
-            }
-        }
+    public static List<ProductList> filterByCostRange(double minCost, double maxCost){
+//        for(ProductList p:productList){
+//            if(p.getCost()>=minCost && p.getCost()<=maxCost){
+//                System.out.println(p);
+//            }
+//        }
+        return (productList.stream()
+                .filter(p->p.getCost()>=minCost && p.getCost()<=maxCost)
+                .toList());
     }
 }

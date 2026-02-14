@@ -17,18 +17,8 @@ public class ProdListMain {
         ProductList.addProduct(p3);
         ProductList.addProduct(p4);
         ProductList.addProduct(p5);
-//        ProductList.filterByName("One Plus");
-//        ProductList.filterByBrand("Samsung");
-        ProductList.filterByCategory("Smartphone");
-//        ProductList.sortByCostAsc();
-//        ProductList.sortByCostDesc();
-//        ProductList.sortByDiscAsc();
-//        ProductList.sortByDiscDesc();
-//        ProductList.sortByRatingAsc();
-//        ProductList.sortByRatingDesc();
-//        ProductList.getproductList();
-            while(true){
 
+            while(true){
                 System.out.println("1. Sort by cost Ascending");
                 System.out.println("2. Sort by cost Descending");
                 System.out.println("3. Sort by discount Ascending");
@@ -41,9 +31,9 @@ public class ProdListMain {
                 System.out.println("10. Filter By Cost Range");
                 System.out.println("11. Exit");
                 System.out.println("Enter Choice: ");
-            int ch = sc.nextInt();
-            sc.nextLine();
-            switch (ch){
+                int ch = sc.nextInt();
+                sc.nextLine();
+                switch (ch){
                 case 1:
                     ProductList.sortByCostAsc();
                     break;
@@ -65,33 +55,29 @@ public class ProdListMain {
                     break;
 
                 case 7 :
-                        System.out.print("Enter name: ");
-                        String name = sc.nextLine();
-                        ProductList.filterByName(name);
-                        break;
+                    System.out.print("Enter name: ");
+                    String name = sc.nextLine();
+                    System.out.println(ProductList.filterByName(name));
+                    break;
                 case 8:
                     System.out.print("Enter brand: ");
                     String brand = sc.nextLine();
-                    ProductList.filterByBrand(brand);
+                    System.out.println(ProductList.filterByBrand(brand));
                     break;
                 case 9:
                     System.out.print("Enter category: ");
                     String category = sc.nextLine();
-                    ProductList.filterByCategory(category);
+                    System.out.println(ProductList.filterByCategory(category));
                     break;
                 case 10:
                     System.out.println("Enter min and max cost");
                     double min = sc.nextDouble();
                     double max = sc.nextDouble();
-                    ProductList.filterByCostRange(min,max);
+                    System.out.println(ProductList.filterByCostRange(min,max));
+                    break;
                 case 11:
                     return;
+                }
             }
-
-
-            }
-
-
     }
-
 }

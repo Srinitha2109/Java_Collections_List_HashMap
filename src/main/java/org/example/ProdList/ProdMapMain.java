@@ -1,5 +1,6 @@
 package org.example.ProdList;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class ProdMapMain {
@@ -17,20 +18,8 @@ public class ProdMapMain {
         ProdHashMap.addProductMap(p3);
         ProdHashMap.addProductMap(p4);
         ProdHashMap.addProductMap(p5);
-//        ProdHashMap.displayProducts();
-//        ProdHashMap.sortByCostDesc();
-//        ProdHashMap.filterByName("iPhone 15");
-//        ProdHashMap.filterByCostRange(1000,5000);
-//        ProductList.filterByName("One Plus");
-//        ProductList.filterByBrand("Samsung");
-//        ProductList.filterByCategory("Smartphone");
-//        ProductList.sortByCostAsc();
-//        ProductList.sortByCostDesc();
-//        ProductList.sortByDiscAsc();
-//        ProductList.sortByDiscDesc();
-//        ProductList.sortByRatingAsc();
-//        ProductList.sortByRatingDesc();
-//        ProductList.getproductList();
+//      Map<Integer,ProdHashMap> map= ProdHashMap.sortByBrandDescAndPidAscending();
+//        System.out.println(map);
         while(true){
             System.out.println("1. Sort by cost Ascending");
             System.out.println("2. Sort by cost Descending");
