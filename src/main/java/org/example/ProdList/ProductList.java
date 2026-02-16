@@ -99,7 +99,6 @@ public class ProductList {
        productList.add(prodList);
     }
 
-
     public static void sortByCostAsc() {
         Collections.sort(productList, (p1, p2) -> {
             return Double.compare(p1.getCost(), p2.getCost());
@@ -128,9 +127,7 @@ public class ProductList {
     }
 
     public static void sortByDiscDesc(){
-        Collections.sort(productList,(p1,p2)->{
-            return Double.compare(p2.getDisPerc(),p1.getDisPerc());
-        });
+        productList.sort((p1,p2)-> Float.compare(p2.getDisPerc(),p1.getDisPerc()));
         for(ProductList p:productList){
             System.out.println(p);
         }
